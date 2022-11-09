@@ -3,6 +3,8 @@
 @import "hero.scss";
 @import "upsell.scss";
 @import "press.scss";
+@import "showcase.scss";
+@import "footer-upsell.scss";
 
 * {
     box-sizing: border-box;
@@ -11,14 +13,14 @@
 html,
 body {
     margin: 0;
+    height: 100%;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
 }
 
 .wrapper {
-    margin: 0;
     display: grid;
-    grid-template-columns: 80px repeat(4, 1fr) 80px;
+    grid-template-columns: 32px repeat(4, 1fr) 32px;
     grid-auto-rows: auto;
     justify-content: center;
 }
@@ -30,4 +32,6 @@ main {
     max-width: 1320px;
     width: 100%;
     margin-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
 }
