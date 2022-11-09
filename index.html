@@ -1,28 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFT Landingpage</title>
+    <meta name="description" content="NFT Startup Landing page - Darius Stasiukaitis">
+    <title>NFT Startup Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f1f13e9ca0.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <h1>Hello World</h1>
-    <p>This GOT UPDATED, but later will be <span>NFT Landingpage</span></p>
 
-    <div>
-        <ul>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Service</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
+<body>
+    <div class="wrapper">
+        <header class="header">
+
+            <a href="#"><img src="/assets/logo.svg" alt="logo" class="nft-logo"></a>
+
+            <nav class="header-navigation">
+                <div class="header-navigation--mobile"><i class="fa-solid fa-bars fa-xl"></i></div>
+
+                <ul class="header-navigation__list">
+                    <li class="header-navigation__list-item"><a class="header-navigation__link" href="#">features</a></li>
+                    <li class="header-navigation__list-item"><a class="header-navigation__link" href="#">about</a></li>
+                    <li class="header-navigation__list-item"><a class="header-navigation__link" href="#">launch</a></li>
+                    <li class="header-navigation__list-item"><a class="header-navigation__link header-navigation__link--pink" href="#">sign up</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main class="hero">
+            <section class="hero__content">
+                <div class="hero__text">
+                    <span class="hero__label">Launching Soon</span>
+                    <h1 class="hero__heading">An NFT like no other</h1>
+                    <p class="hero__paragraph">Don’t miss out on the release of our new NFT. Sign up below to receive updates when we go live.</p>
+
+                    <a href="#"><button class="hero__button" type="submit">Sign Up</button></a>
+                </div>
+
+                <div class="hero__background">
+                    <img class="hero__background-image" src="/assets/graphic.png" alt="hero-background">
+                </div>
+            </section>
+
+            <section class="upsell">
+                <div class="upsell__text">
+                    <h2 class="upsell__heading">Free NFT for early birds</h2>
+                    <p class="upsell__paragraph">Sign up today and you’ll get a free NFT when we launch.</p>
+                </div>
+            </section>
+
+            <section class="press">
+                <div class="press__logos">
+                    <ul class="press__logo-list">
+                        <li><img src="/assets/companies/1.svg" alt="company-1" class="company-logo"></li>
+                        <li><img src="/assets/companies/2.svg" alt="company-2" class="company-logo"></li>
+                        <li><img src="/assets/companies/3.svg" alt="company-3" class="company-logo"></li>
+                        <li><img src="/assets/companies/4.svg" alt="company-4" class="company-logo"></li>
+                        <li><img src="/assets/companies/5.svg" alt="company-5" class="company-logo company-logo-hidden"></li>
+                    </ul>
+                                      
+                </div>
+
+            </section>
+        </main>
     </div>
+
 </body>
+
 </html>
