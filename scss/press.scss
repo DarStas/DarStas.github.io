@@ -1,0 +1,38 @@
+.press {
+    margin-top: 56px;
+    margin-bottom: 56px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 28px;
+    column-gap: 20px;
+
+    &__logo-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+}
+
+.company-logo {
+    text-decoration: none;
+}
+
+.company-logo-hidden {
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    .press {
+        &__logo-list {
+            justify-content: space-between;
+        }
+    }
+
+    .company-logo-hidden {
+        display: inline;
+    }
+}

@@ -1,25 +1,513 @@
-body {
-    box-sizing: border-box;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1 {
-    color: blue;
+.nft-logo {
+  height: 36px;
 }
 
-p {
-    color: purple;
+.header-navigation {
+  cursor: pointer;
+}
+.header-navigation__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+.header-navigation__link {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #555555;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+}
+.header-navigation__link--pink {
+  color: #FF3998;
 }
 
-span {
-    font-weight: bold;
+@media screen and (min-width: 992px) {
+  .wrapper {
+    margin-bottom: 72px;
+  }
+  .header-navigation--mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 30px repeat(4, 1fr) 30px;
+    grid-auto-rows: auto;
+    margin-top: 30px;
+    margin-bottom: 105px;
+  }
+  .header-navigation__list {
+    display: none;
+  }
+}
+.hero {
+  margin-top: 46px;
+  margin-bottom: 80px;
+  grid-column: 2/span 5;
+}
+.hero__content {
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+}
+.hero__text {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  gap: 20px;
+  min-width: 274px;
+}
+.hero__label {
+  color: #FF3998;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.hero__heading {
+  margin: 0;
+  color: #111111;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+}
+.hero__paragraph {
+  margin: 0;
+  color: #555555;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+}
+.hero__button {
+  cursor: pointer;
+  max-width: 188px;
+  padding: 18px 52px;
+  border: 4px solid transparent;
+  border-radius: 50px;
+  background: linear-gradient(white, white) padding-box, linear-gradient(112deg, rgba(255, 64, 87, 0.68) 0%, rgba(253, 79, 80, 0.84) 20%, rgba(237, 125, 71, 0.89) 60%, rgba(193, 164, 89, 0.71) 100%) border-box;
+  color: #111111;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+}
+.hero__background-image {
+  height: 360px;
+  position: absolute;
+  top: -18px;
+  right: -174px;
 }
 
-ul {
+@media screen and (min-width: 992px) {
+  .hero {
+    margin-top: 180px;
+    margin-bottom: 180px;
+    grid-column: 2/span 4;
+  }
+  .hero__heading {
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 116px;
+  }
+  .hero__background-image {
+    height: 520px;
+  }
+}
+.upsell {
+  display: flex;
+  align-items: flex-end;
+  min-height: 326px;
+  background: linear-gradient(112deg, rgba(255, 64, 87, 0.65) 0%, rgba(253, 79, 80, 0.84) 20%, rgba(237, 125, 71, 0.89) 60%, rgba(193, 164, 89, 0.71) 100%);
+}
+.upsell__text {
+  padding: 32px 30px;
+}
+.upsell__heading {
+  margin: 0;
+  margin-bottom: 16px;
+  color: #111111;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+}
+.upsell__paragraph {
+  color: #111111;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+@media screen and (min-width: 992px) {
+  .upsell {
+    border-radius: 16px;
+  }
+  .upsell__text {
+    padding: 64px 64px;
+  }
+}
+.press {
+  margin-top: 56px;
+  margin-bottom: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 28px;
+  column-gap: 20px;
+}
+.press__logo-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.company-logo {
+  text-decoration: none;
+}
+
+.company-logo-hidden {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .press__logo-list {
+    justify-content: space-between;
+  }
+  .company-logo-hidden {
+    display: inline;
+  }
+}
+.showcase {
+  margin-bottom: 92px;
+}
+.showcase__heading {
+  margin: 0;
+  color: #111111;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+}
+.showcase__paragraph {
+  color: #555555;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+}
+.showcase__link {
+  color: #555555;
+  font-weight: 500;
+  text-underline-offset: 4px;
+}
+
+.showcase__nft-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-auto-flow: column;
+  list-style: none;
+  grid-auto-columns: 290px;
+  gap: 40px;
+  overflow-x: auto;
+}
+
+.showcase__nft-card {
+  width: 100%;
+  height: 100%;
+  background-color: #EEEEEE;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.showcase__nft-content {
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+}
+.showcase__nft-content__left {
+  text-align: left;
+}
+.showcase__nft-content__right {
+  text-align: right;
+}
+.showcase__nft-content__right, .showcase__nft-content__left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.showcase__nft-content__image {
+  width: 290px;
+  height: 278px;
+  flex-basis: 70%;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.nft-content {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.nft-content .content--left {
+  justify-self: start;
+  line-height: 1;
+}
+.nft-content .content--right {
+  justify-self: end;
+  line-height: 1;
+}
+.nft-content__top {
+  color: #FF8139;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.nft-content__top.content--left {
+  margin-bottom: 12px;
+}
+.nft-content__top.content--right {
+  margin-bottom: 12px;
+  color: #555555;
+}
+.nft-content__mid {
+  color: #111111;
+  font-size: 20px;
+  font-weight: 500;
+}
+.nft-content__mid.content--left {
+  margin-bottom: 12px;
+  text-transform: capitalize;
+}
+.nft-content__mid.content--right {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+.nft-content__bottom {
+  color: #555555;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.footer-upsell {
+  margin-top: 46px;
+  margin-bottom: 80px;
+  grid-column: 2/span 5;
+}
+.footer-upsell__content {
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+}
+.footer-upsell__text {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  gap: 20px;
+  min-width: 274px;
+}
+.footer-upsell__label {
+  color: #FF3998;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.footer-upsell__heading {
+  margin: 0;
+  color: #111111;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+}
+.footer-upsell__paragraph {
+  margin: 0;
+  color: #555555;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+}
+.footer-upsell__button {
+  cursor: pointer;
+  max-width: 188px;
+  padding: 18px 52px;
+  border: 4px solid transparent;
+  border-radius: 50px;
+  background: linear-gradient(white, white) padding-box, linear-gradient(112deg, rgba(255, 64, 87, 0.68) 0%, rgba(253, 79, 80, 0.84) 20%, rgba(237, 125, 71, 0.89) 60%, rgba(193, 164, 89, 0.71) 100%) border-box;
+  color: #111111;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+}
+.footer-upsell__background-image {
+  height: 360px;
+  position: absolute;
+  top: -18px;
+  right: -50px;
+}
+
+@media screen and (min-width: 992px) {
+  .footer-upsell {
+    margin-top: 180px;
+    margin-bottom: 180px;
+    grid-column: 2/span 4;
+  }
+  .footer-upsell__heading {
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 116px;
+  }
+  .footer-upsell__background-image {
+    height: 520px;
+    position: absolute;
+    right: 100px;
+  }
+}
+.footer__header {
+  flex: 1;
+}
+.footer__paragraph {
+  margin: 32px 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  color: #555555;
+}
+.footer__social-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 16px;
+}
+.footer__content {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 74px;
+  margin: 0 38px 0 0;
+}
+.footer__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  min-width: 110px;
+}
+.footer__heading {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555555;
+  margin: 28px 0;
+}
+.footer__link {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  color: #555555;
+  text-decoration: none;
+  padding: 5px 0;
+}
+.footer__list-item {
+  margin: 20px 0;
+}
+.footer__bottom--right {
+  display: none;
+}
+.footer__bottom {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  color: #999999;
+}
+
+.social-list__item {
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width: 992px) {
+  .footer {
     display: flex;
-    gap: 20px;
-    list-style: none;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 992px) {
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px;
+    justify-content: space-between;
+  }
+}
+* {
+  box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 32px repeat(4, 1fr) 32px;
+  grid-auto-rows: auto;
+  justify-content: center;
+}
+
+header,
+main,
+footer {
+  grid-column: 2/span 4;
+  margin: 0;
+  max-width: 1320px;
+  width: 100%;
+  margin-top: 30px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 30px repeat(4, 1fr) 30px;
+    grid-auto-rows: auto;
+    margin-top: 30px;
+    margin-bottom: 105px;
+  }
+  .footer__bottom--right {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
